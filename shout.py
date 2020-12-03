@@ -44,6 +44,5 @@ with ZipFile(file_name, 'r') as zip:
             # read the csv file 
             spots = pd.read_csv(info.filename, names=header_list)
             fill_nan = spots.fillna(0)
-            is_call = fill_nan['Call Sign']=='8P9DH'
-            spots_call = fill_nan[is_call]
+            spots_call = fill_nan[fill_nan['Call Sign']=='8P9DH']
             print(spots_call.head()) 
