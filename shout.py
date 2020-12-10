@@ -5,8 +5,9 @@ import csv
 
 file_url = "http://wsprnet.org/archive/wsprspots-2020-12.csv.zip"
 file_name = "current.csv.zip"
-header_list = ["Timestamp",
+header_list = [
 "Spot ID",
+"Timestamp",
 "Reporter",
 "Reporter's Grid",
 "SNR",
