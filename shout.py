@@ -42,11 +42,11 @@ with ZipFile(file_name, 'r') as zip:
     # extract file 
     print('Extracting the file now...') 
     zip.extractall() 
-    print('Done!')
+    print('Extraction complete!')
 
     for info in zip.infolist(): 
         with open(info.filename) as csv_file: 
-            print(info.filename) 
+            print("Cleaning and filtering data...") 
             # read the csv file 
             spots = pd.read_csv(info.filename, names=header_list)
             spots['Timestamp'] = pd.to_datetime(spots['Timestamp'], unit='s')
