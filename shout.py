@@ -46,5 +46,5 @@ with ZipFile(file_name, 'r') as zip:
             spots = pd.read_csv(info.filename, names=header_list)
             spots['Timestamp'] = pd.to_datetime(spots['Timestamp'], unit='s')
 
-            spots_call = spots[spots['Call Sign']=='KE0CCI'].fillna(0)
+            spots_call = spots[spots['Call Sign']=='8P9DH'].fillna(0)
             print(spots_call.head()) 
