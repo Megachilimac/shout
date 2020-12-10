@@ -34,8 +34,8 @@ with open(file_name,"wb") as current:
 # opening the zip file in READ mode 
 with ZipFile(file_name, 'r') as zip: 
 
-    # extracting all the files 
-    print('Extracting all the files now...') 
+    # extract file 
+    print('Extracting the file now...') 
     zip.extractall() 
     print('Done!')
 
