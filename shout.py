@@ -52,4 +52,5 @@ with ZipFile(file_name, 'r') as zip:
             spots['Timestamp'] = pd.to_datetime(spots['Timestamp'], unit='s')
 
             spots_call = spots[spots['Call Sign']=='KE0CCI'].fillna(0)
+            pd.set_option('display.max_rows', None)
             print(spots_call) 
